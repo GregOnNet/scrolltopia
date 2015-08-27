@@ -1,0 +1,27 @@
+﻿@using Scroll.Playground.Models
+@{
+    ViewBag.Title = "simplebar | Scrolltopia";
+}
+
+<div class="container">
+    <h1>simplebar showcase
+        <small>
+            <a href="https://github.com/Grsmto/simplebar" target="_blank">Project site</a> |
+            <a href="http://grsmto.github.io/simplebar/" target="_blank">Demos</a>
+        </small>
+    </h1>
+
+    <h2>Prerequisits</h2>
+    <p>To use simplebar you have to add it's script file and stylesheet</p>
+    <pre class="reset-styles">
+        <code lang="html">
+&lt;link rel="stylesheet" href="css/simplebar.css" /&gt;
+&lt;script src="js/simplebar.min.js"&gt;&lt;/script&gt;
+        </code>
+</pre>
+    
+    <h2>Samples</h2>
+    <p>In this section you will find different Samples covering different use cases we have in our web applications.</p>
+
+    @Html.Partial("Demos/_SimplebarDemos", ERender.Content)
+</div>

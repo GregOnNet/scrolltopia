@@ -1,0 +1,113 @@
+﻿@{
+    ViewBag.Title = "Handle scroll events | iScroll";
+}
+
+
+<div class="container">
+    <div class="row">
+        <h1>Handle scroll events <small><a href="http://iscrolljs.com/#custom-events">available events</a></small></h1>
+        <div>
+            This sample listens to the <code>scroll</code> event.
+            When it is fired a gradient should be added at the top/bottom of the scrolling-container.
+        </div>
+
+        <div class="alert alert-warning">
+            <span class="glyphicon glyphicon-warning-sign"></span> If you want to use the <code>scroll</code> event
+            <code>iscroll-probe.js</code> has to be used. The documentation says <code>scroll</code> needs a lot of performance.
+            To make use of <code>scroll</code> the configuration property <code>probeType</code> hast to be set.
+        </div>
+
+        <hr>
+    </div>
+
+    <div class="row">
+
+        <section class="sample plain">
+
+            <div class="scroll-gradient">
+                <div class="scroll-gradient-top"></div>
+            </div>
+
+            <div class="iscroll-container">
+                <div class="scrolling-content">
+                    @LoremIpsum.InsertParagraphs(4)
+                </div>
+            </div>
+
+            <div class="scroll-gradient">
+                <div class="scroll-gradient-bottom"></div>
+            </div>
+
+        </section>
+
+    </div>
+    <div class="row">
+        <h2>Configuration</h2>
+        <pre class="reset-styles">
+            <code class="javascript">
+{
+    // Allowed values 1..3 -> 3 means highes possible raise of events
+    probeType: 2,
+    scrollbars: true,
+    mouseWheel: true
+}  
+            </code>
+        </pre>
+
+        <h2>Used Markup</h2>
+        <pre class="reset-styles">
+            <code class="html">
+&lt;div class="scroll-gradient-top"&gt;&lt;/div&gt; &lt;!-- this div is wrapped by scroll-gradient --&gt;
+&lt;div class="iscroll-container"&gt;
+    &lt;div class="scrolling-content"&gt;
+        ...
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="scroll-gradient-bottom"&gt;&lt;/div&gt; &lt;!-- this div is wrapped by scroll-gradient --&gt;
+            </code>
+        </pre>
+    </div>
+</div>
+
+@section Script
+{
+    <script type="text/javascript">
+        (function () {
+            'use strict';
+
+            var gradientTop = $('.scroll-gradient-top');
+            var gradientBottom = $('.scroll-gradient-bottom');
+
+            var myScroll = new IScroll('.iscroll-container', {
+                probeType: 3,
+                scrollbars: true,
+                mouseWheel: true
+            });
+
+            handleGradienVisibility(0, 0, myScroll.maxScrollY);
+
+            myScroll.on('scroll', raiseScrollActionStarted);
+
+            function raiseScrollActionStarted() {
+                var currentY = myScroll.y;
+                var minScrollY = 0;
+                var maxScrollY = myScroll.maxScrollY;
+
+                handleGradienVisibility(currentY, minScrollY, maxScrollY);
+            }
+
+            function handleGradienVisibility(currentY, minScrollY, maxScrollY) {
+
+                if (currentY > maxScrollY + gradientTop.height())
+                    gradientBottom.fadeIn();
+                else
+                    gradientBottom.fadeOut();
+
+                if (currentY < minScrollY - gradientBottom.height())
+                    gradientTop.fadeIn();
+                else
+                    gradientTop.fadeOut();
+            };
+        }());
+     </script>
+}

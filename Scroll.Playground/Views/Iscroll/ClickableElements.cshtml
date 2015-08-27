@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "Scrollbar | iScroll";
+}
+
+<div class="container">
+    <div class="row">
+        <h1>Handle click event when iScroll is disabled</h1>
+        <p>
+            This sample is used to see if iScroll handles click-evevnts even when it is disabled.
+        </p>
+        <div class="alert alert-danger">
+            <span class="glyphicon glyphicon-exclamation-sign"></span> The upper container's link is not clickable since the browser emulator is enabled.
+            We experienced strange behavior setting up Kindle Fire HDX.
+        </div>
+    </div>
+    <div class="row">
+
+        <section class="sample">
+
+            <div id="container-having-iscroll-enabled" class="iscroll-container">
+                <p class="height-of-450-pixels">
+                    Just scroll & click!
+                    <br>
+                    <a href="http://woiwode.info/blog" target="_blank">woiwode.info/blog</a>
+                </p>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section class="sample">
+
+            <div id="container-having-iscroll-disabled" class="iscroll-container">
+                <p class="height-of-450-pixels">
+                    Scrolling is disabled here! Click events should still work.
+                    <br>
+                    <a href="http://woiwode.info/blog" target="_blank">woiwode.info/blog</a>
+                </p>
+            </div>
+
+        </section>
+
+    </div>
+    <div class="row">
+        <h2>Configuration</h2>
+        <pre>
+            {
+                scrollbars: true,
+                mouseWheel: true
+            }   
+        </pre>
+    </div>
+</div>
+
+@section Script
+{
+    <script type="text/javascript">
+        (function () {
+            'use strict';
+
+            var enabledIscroll = new IScroll('#container-having-iscroll-enabled', {
+                mouseWheel: true,
+                scrollbars: true
+            });
+
+            var disabledIscroll = new IScroll('#container-having-iscroll-disabled', {
+                mouseWheel: true,
+                scrollbars: true
+            });
+
+            disabledIscroll.disable();
+        }());
+     </script>
+}

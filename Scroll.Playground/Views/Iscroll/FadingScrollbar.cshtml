@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Fading scrollbar | iScroll";
+}
+
+<div class="container">
+    <div class="row">
+        <h1>Fading scrollbar</h1>
+        <p>
+            This sample displays the scrollbar only when the user scrolls.
+        </p>
+    </div>
+    <div class="row">
+
+        <section class="sample">
+
+            <div class="iscroll-container">
+                <p class="height-of-450-pixels">I should scroll</p>
+            </div>
+
+        </section>
+
+    </div>
+    <div class="row">
+        <h2>Configuration</h2>
+        <pre>
+            {
+                scrollbars: true,
+                fadeScrollbars: true,
+                mouseWheel: true
+            }   
+        </pre>
+    </div>
+</div>
+
+@section Script
+{
+    <script type="text/javascript">
+        (function () {
+            'use strict';
+
+            var myscroll = new IScroll('.iscroll-container', {
+                scrollbars: true,
+                fadeScrollbars: true,
+                mouseWheel: true
+            });
+        }());
+     </script>
+}

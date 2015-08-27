@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Minimal | iScroll";
+}
+
+<div class="container">
+    <div class="row">
+        <h1>Minimal sample</h1>
+        <p>
+            This sample has no scrollbar. It just can be dragged up and down to scroll
+        </p>
+    </div>
+    <div class="row">
+
+        <section class="sample">
+
+            <div class="iscroll-container">
+                <div class="height-of-450-pixels">
+                    @LoremIpsum.InsertParagraphs(1)
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+</div>
+
+@section Script
+{
+    <script type="text/javascript">
+        (function () {
+            'use strict';
+
+            var myscroll = new IScroll('.iscroll-container');
+        }());
+     </script>
+}

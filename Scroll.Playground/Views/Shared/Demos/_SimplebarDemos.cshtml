@@ -1,0 +1,60 @@
+﻿@using Scroll.Playground.Models
+
+@model  ERender
+@{
+    var collection = new ControllerDemoCollection
+    {
+        ControllerName = "Simplebar",
+        Demos = new List<DemoSection>
+        {
+            new DemoSection
+            {
+                Title = "Introduction",
+                Demos = new List<Demo>
+                {
+                    new Demo { Title= "Start", ActionName = "Index"}
+                }
+            },
+            new DemoSection
+            {
+                Title = "Basic",
+                Demos = new List<Demo>
+                {
+                    new Demo { Title="Minimal", ActionName = "MinimalSetup"},
+                    new Demo { Title="Scrollbar", ActionName = "Scrollbar"},
+                }
+            },
+            new DemoSection
+            {
+                Title = "Interaction",
+                Demos = new List<Demo>
+                {
+                }
+            },
+            new DemoSection
+            {
+                Title = "Dynamic DOM",
+                Demos = new List<Demo>
+                {
+                }
+            },
+            new DemoSection
+            {
+                Title = "Events",
+                Demos = new List<Demo>
+                {
+                }
+            }
+        }
+    };
+}
+
+@switch (Model)
+{
+    case ERender.Menu:
+        @Html.Partial("Templates/_DemoCollectionAsDropdownMenu", collection);
+        break;
+    case ERender.Content:
+        @Html.Partial("Templates/_DemoCollectionAsContent", collection)
+        break;
+}

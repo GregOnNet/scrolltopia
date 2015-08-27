@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Decelerating scrollbar | iScroll";
+}
+
+
+<div class="container">
+    <div class="row">
+        <h1>Decelerating scrollbar</h1>
+        <p>
+            Deceleration configures the duration of scrolling animation.
+        </p>
+        <div class="alert alert-info">
+            <span class="glyphicon glyphicon-info-sign"></span> The smaller the configured <code>deceleration</code> the longer the animation takes.
+        </div>
+        <div class="alert alert-warning">
+            <span class="glyphicon glyphicon-warning-sign"></span> It seems that this option has no impact when mouse wheel is used.
+        </div>
+
+        <hr>
+    </div>
+    <div class="row">
+
+        <section class="sample">
+
+            <div class="iscroll-container ">
+                <p class="height-of-450-pixels">I should scroll</p>
+            </div>
+
+        </section>
+        
+    </div>
+    <div class="row">
+        <h2>Configuration</h2>
+        <pre>
+            {
+                scrollbars: true,
+                mouseWheel: true,
+                // default: 0.0002
+                deceleration: 0.00002
+            }   
+        </pre>
+    </div>
+</div>
+
+@section Script
+{
+    <script type="text/javascript">
+        (function () {
+            'use strict';
+
+            var myScroll = new IScroll('.iscroll-container', {
+                scrollbars: true,
+                mouseWheel: true,
+                deceleration: 0.00002
+        });
+        }());
+     </script>
+}

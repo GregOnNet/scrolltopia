@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Shrinked scrollbar | iScroll";
+}
+
+
+<div class="container">
+    <div class="row">
+        <h1>Shrinked scrollbar</h1>
+        <p>
+            This sample uses <code>shrinkScrollbars</code> adding an animation when the user scrolls to top or bottom of the container.
+        </p>
+        <div class="alert alert-warning">
+            <span class="glyphicon glyphicon-warning-sign"></span> It seems that this option has no impact when mouse wheel is used.
+        </div>
+
+        <hr>
+    </div>
+    <div class="row">
+
+        <section class="sample">
+
+            <div class="iscroll-container clipped ">
+                <p class="height-of-450-pixels">I should scroll</p>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section class="sample">
+
+            <div class="iscroll-container scaled">
+                <p class="height-of-450-pixels">I should scroll</p>
+            </div>
+
+        </section>
+
+    </div>
+    <div class="row">
+        <h2>Configuration</h2>
+        <pre>
+            {
+                scrollbars: true,
+                shrinkScrollbars: 'clip' || 'scale',
+                mouseWheel: true
+            }   
+        </pre>
+    </div>
+</div>
+
+@section Script
+{
+    <script type="text/javascript">
+        (function () {
+            'use strict';
+
+            var clippedScroll = new IScroll('.iscroll-container.clipped', {
+                scrollbars: true,
+                shrinkScrollbars: 'clip',
+                mouseWheel: true
+            });
+
+            var scaledScroll = new IScroll('.iscroll-container.scaled', {
+                scrollbars: true,
+                shrinkScrollbars: 'scale',
+                mouseWheel: true
+            });
+        }());
+     </script>
+}

@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Animated scrolling content | iScroll";
+}
+
+<div class="container">
+    <div class="row">
+        <h1>Animated scrolling content</h1>
+        <p>
+            Hovering the picture inside the sample will scale it to the half of its width and height
+        </p>
+        <div class="alert alert-warning">
+            <strong>IScroll will not refresh!</strong>
+            Unfortunately IScroll is not aware of animations. It does not observe it's scrolling content.
+        </div>
+         <hr>
+    </div>
+    <div class="row">
+
+        <section class="sample">
+
+            <div class="iscroll-container">
+                <div class="scrolling-content">
+                    <p class="mdr-tower scale-to-the-half"></p>
+                </div>
+            </div>
+
+        </section>
+        
+    </div>
+    <div class="row">
+        <h2>Configuration</h2>
+        <pre>
+            {
+                scrollbars: true,
+                mouseWheel: true
+            }   
+        </pre>
+    </div>
+</div>
+
+@section Script
+{
+    <script type="text/javascript">
+        (function () {
+            'use strict';
+
+            var myScroll = new IScroll('.iscroll-container', {
+                scrollbars: true,
+                mouseWheel: true
+            });
+        }());
+     </script>
+}

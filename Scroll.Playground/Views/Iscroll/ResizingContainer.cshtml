@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Resizing container | iScroll";
+}
+
+
+<div class="container">
+    <div class="row">
+        <h1>Resizing container</h1>
+        <p>
+            This sample uses shows the usage of <code>refresh()</code> triggering iScroll to calculate a new scrollbar.
+        </p>
+    </div>
+    <div class="row">
+        <button class="btn btn-primary" id="btn-change-height">Change height</button>
+        <hr>
+    </div>
+    <div class="row">
+
+        <section class="sample">
+
+            <div class="iscroll-container ">
+                <p class="height-of-450-pixels">I should scroll</p>
+            </div>
+
+        </section>
+        
+    </div>
+    <div class="row">
+        <h2>Configuration</h2>
+        <pre>
+            {
+                scrollbars: true,
+                mouseWheel: true
+            }   
+        </pre>
+
+        <h2>Other</h2>
+        <pre>
+            // refresh after height changed
+            myScroll.refresh();
+        </pre>
+    </div>
+</div>
+
+@section Script
+{
+    <script type="text/javascript">
+        (function () {
+            'use strict';
+
+            var myScroll = new IScroll('.iscroll-container', {
+                scrollbars: true,
+                mouseWheel: true
+            });
+
+
+            $('#btn-change-height').on('click', function() {
+
+                $('.iscroll-container').toggleClass('iscroll-container-400px');
+                myScroll.refresh();
+
+            });
+        }());
+     </script>
+}

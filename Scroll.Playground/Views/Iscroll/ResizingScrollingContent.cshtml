@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Resizing scrolling content | iScroll";
+}
+
+
+<div class="container">
+    <div class="row">
+        <h1>Resizing scrolling content</h1>
+        <p>
+            IScroll's <code>refresh()</code> also works when the scrolling-content has changed.
+        </p>
+        <div class="alert alert-warning">
+            <strong>Behavior!</strong>
+            <code>new IScroll('iscroll-container')</code> just defines the wrapper for scrolling. IScroll will automatically fetch the first child and will make it srollable.
+            That's why a inner container is introduced in this sample <code>"scrolling-content"</code>.
+        </div>
+    </div>
+    <div class="row">
+        <button class="btn btn-primary" id="btn-resize-scrolling-content">Resize scrolling content</button>
+        <hr>
+    </div>
+    <div class="row">
+
+        <section class="sample">
+
+            <div class="iscroll-container">
+                <div class="scrolling-content">
+                    @LoremIpsum.InsertParagraphs(2)
+                    <p id="p_empty"></p>
+                </div>
+            </div>
+
+        </section>
+        
+    </div>
+    <div class="row">
+        <h2>Configuration</h2>
+        <pre>
+            {
+                scrollbars: true,
+                mouseWheel: true
+            }   
+        </pre>
+
+        <h2>Other</h2>
+        <pre>
+            // refresh after height changed
+            myScroll.refresh();
+        </pre>
+    </div>
+</div>
+
+@section Script
+{
+    <script type="text/javascript">
+        (function () {
+            'use strict';
+
+            var myScroll = new IScroll('.iscroll-container', {
+                scrollbars: true,
+                mouseWheel: true
+            });
+
+
+            $('#btn-resize-scrolling-content').on('click', function () {
+
+                $('#p_empty').toggleClass('mdr-tower');
+                myScroll.refresh();
+
+            });
+        }());
+     </script>
+}

@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Minimal Setup | simplebar";
+}
+
+<div class="container">
+    <div class="row">
+        <h1>Minimal sample</h1>
+        <p>
+            This sample adds a scrollbar by adding a custom attribute to the container that should be scrolled:
+            <code>data-simplebar-direction="vertical"</code>
+        </p>
+    </div>
+    <div class="row">
+
+        <section class="sample">
+
+            <div class="height-of-450-pixels" data-simplebar-direction="vertical">
+                @LoremIpsum.InsertParagraphs(6)
+            </div>
+
+        </section>
+
+    </div>
+</div>

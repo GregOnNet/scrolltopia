@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "Triggering controls | iScroll";
+}
+
+
+<div class="container">
+    <div class="row">
+        <h1>Triggering controls</h1>
+        <div>
+            In this sample scrolling can be controled by clicking buttons.
+                <code>scrollBy(x, y, time, ease)</code> is used to scroll relative to the current position.
+                <code>IScroll.utils.ease</code> namespace provides <i>4</i> different kinds of scroll animations.
+                <ul>
+                    <li>quadratic</li>
+                    <li>ciruclar</li>
+                    <li>back</li>
+                    <li>bounce</li>
+                    <li>elastic</li>
+                </ul>
+        </div>
+
+        <div class="alert alert-info">
+            <span class="glyphicon glyphicon-info-sign"></span> There is also a method called <code>scrollTo(x, y, time, ease)</code> which scrolls absolute to the given coordinates.
+        </div>
+
+        <hr>
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+
+            <section class="sample">
+
+                <div class="iscroll-container">
+                    <div class="scrolling-content">
+                        @LoremIpsum.InsertParagraphs(4)
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+            <div class="btn-group-vertical" role="group" aria-label="scroll-controls">
+                <button id="btn-scroll-up" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-up"></span></button>
+                <button id="btn-scroll-down" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-down"></span></button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <h2>Configuration</h2>
+        <pre>
+            {
+                scrollbars: true,
+                interactiveScrollbars: true,
+                mouseWheel: true
+            }   
+        </pre>
+    </div>
+</div>
+
+@section Script
+{
+    <script type="text/javascript">
+        (function () {
+            'use strict';
+
+            var myScroll = new IScroll('.iscroll-container', {
+                scrollbars: true,
+                interactiveScrollbars: true,
+                mouseWheel: true
+            });
+
+            var up = $('#btn-scroll-up');
+            var down = $('#btn-scroll-down');
+
+            up.on('click', function () {
+                myScroll.scrollBy(0, 50, 200, IScroll.utils.ease.quadratic);
+            });
+
+            down.on('click', function () {
+                myScroll.scrollBy(0, -50, 200, IScroll.utils.ease.quadratic);
+            });
+
+        }());
+     </script>
+}
