@@ -21,7 +21,6 @@ namespace Scroll.Playground.ViewModels
             {
                 Content = model
             };
-
         }
 
         /// <summary>
