@@ -28,3 +28,6 @@ GITHUB
   specs:
     src/simplebar.css (a8914404c1ded73223ba190e2e05b05f9bde4783)
     src/simplebar.js (a8914404c1ded73223ba190e2e05b05f9bde4783)
+  remote: cubiq/iscroll
+  specs:
+    build/iscroll-probe.js (114cc30ebdcdad3e18d7b1147daf719187f0cd4e)

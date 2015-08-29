@@ -26,6 +26,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -382,6 +383,10 @@
     <Content Include="bower_components\simplebar\test\index.html" />
     <Content Include="bower_components\simplebar\test\test.js" />
     <Content Include="Global.asax" />
+    <Content Include="paket-files\cubiq\iscroll\build\iscroll-probe.js" />
+    <Content Include="paket-files\grsmto\simplebar\simplebar.js" />
+    <Content Include="paket-files\grsmto\simplebar\src\simplebar.css" />
+    <Content Include="paket-files\grsmto\simplebar\src\simplebar.js" />
     <Content Include="styles\utils.css" />
     <Content Include="styles\scrolling.css" />
     <Content Include="Web.config" />
@@ -428,6 +433,8 @@
     <Content Include="bower_components\respond\LICENSE-MIT" />
     <Content Include="bower_components\respond\package.json" />
     <Content Include="bower_components\respond\README.md" />
+    <Content Include="paket-files\grsmto\simplebar\src\paket.version" />
+    <Content Include="paket-files\cubiq\iscroll\build\paket.version" />
     <None Include="Views\Simplebar\Index.cshtml" />
     <None Include="Views\Simplebar\MinimalSetup.cshtml" />
   </ItemGroup>
