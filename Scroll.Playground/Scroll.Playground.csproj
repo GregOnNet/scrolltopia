@@ -46,18 +46,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="..\paket-files\grsmto\simplebar\src\simplebar.js">
-      <Paket>True</Paket>
-      <Link>paket-files/simplebar.js</Link>
-    </Content>
-    <Content Include="..\paket-files\grsmto\simplebar\src\simplebar.css">
-      <Paket>True</Paket>
-      <Link>paket-files/simplebar.css</Link>
-    </Content>
-    <Content Include="..\paket-files\cubiq\iscroll\build\iscroll-probe.js">
-      <Paket>True</Paket>
-      <Link>paket-files/iscroll-probe.js</Link>
-    </Content>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -114,6 +102,7 @@
     <Compile Include="Controllers\IscrollController.cs" />
     <Compile Include="Controllers\SimpleBarController.cs" />
     <Compile Include="DemoRepositories\IscrollDemos.cs" />
+    <Compile Include="DemoRepositories\SimplebarDemos.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -130,6 +119,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <None Include="App_Code\LoremIpsum.cshtml" />
+    <Content Include="paket-files\cubiq\iscroll\build\iscroll-probe.js" />
+    <Content Include="paket-files\grsmto\simplebar\src\simplebar.css" />
+    <Content Include="paket-files\grsmto\simplebar\src\simplebar.js" />
     <Content Include="Web.config.install.xdt">
       <Paket>True</Paket>
     </Content>
@@ -476,6 +468,8 @@
     <Content Include="bower_components\respond\LICENSE-MIT" />
     <Content Include="bower_components\respond\package.json" />
     <Content Include="bower_components\respond\README.md" />
+    <Content Include="paket-files\grsmto\simplebar\src\paket.version" />
+    <Content Include="paket-files\cubiq\iscroll\build\paket.version" />
     <None Include="Views\Simplebar\Index.cshtml" />
     <None Include="Views\Simplebar\MinimalSetup.cshtml" />
   </ItemGroup>
