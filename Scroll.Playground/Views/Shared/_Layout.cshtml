@@ -1,4 +1,11 @@
 ﻿@using Scroll.Playground.Models
+@using Scroll.Playground.ViewModels
+@using Scroll.Playground.DemoRepositories
+
+@{
+    var iscrollDemos = new IscrollDemos();
+}
+
 <!DOCTYPE html>
 
 <html>
@@ -42,12 +49,16 @@
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">iScroll <span class="caret"></span></a>
-                        @Html.Partial("Demos/_IScrollDemos", ERender.Menu)
-
+                        @{
+                            Html.RenderPartial("Demos/_IScrollDemos",
+                                Render<ControllerDemoCollection>
+                                    .Model(iscrollDemos.GetAll())
+                                    .As(ERender.Menu));
+                        }
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">simplebar <span class="caret"></span></a>
-                        @Html.Partial("Demos/_SimplebarDemos", ERender.Menu)
+                        @*@Html.Partial("Demos/_SimplebarDemos", ERender.Menu)*@
                     </li>
                 </ul>
             </div>

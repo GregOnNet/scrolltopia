@@ -1,12 +1,20 @@
 ﻿using System.Web.Mvc;
+using Scroll.Playground.DemoRepositories;
 
 namespace Scroll.Playground.Controllers
 {
     public class IscrollController : Controller
     {
+        private readonly IscrollDemos _demos;
+
+        public IscrollController()
+        {
+            _demos = new IscrollDemos();
+        }
+
         public ActionResult Index()
         {
-            return View();
+            return View(_demos.GetAll());
         }
 
         public ViewResult MinimalSetup()
@@ -18,12 +26,12 @@ namespace Scroll.Playground.Controllers
         {
             return View();
         }
-        
+
         public ViewResult FadingScrollbar()
         {
             return View();
         }
-        
+
         public ViewResult InteractiveScrollbar()
         {
             return View();
@@ -38,7 +46,7 @@ namespace Scroll.Playground.Controllers
         {
             return View();
         }
-        
+
 
 
         public ActionResult ResizingContainer()

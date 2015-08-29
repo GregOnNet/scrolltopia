@@ -1,4 +1,7 @@
 ﻿@using Scroll.Playground.Models
+@using Scroll.Playground.ViewModels
+@model ControllerDemoCollection
+
 @{
     ViewBag.Title = "iScroll | Scrolltopia";
 }
@@ -25,7 +28,7 @@
         </ul>
     </div>
     <pre class="reset-styles">
-        <code class="css">
+    <code class="css">
 .iscroll-container {
     height:   200px;
     position: relative;
@@ -36,7 +39,11 @@
 
     <h2>Samples</h2>
     <p>In this section you will find different Samples covering different use cases we have in our web applications.</p>
-
-    @Html.Partial("Demos/_IScrollDemos", ERender.Content)
-
+    @{
+        Html.RenderPartial(
+            "Demos/_IScrollDemos",
+            Render<ControllerDemoCollection>
+                .Model(Model)
+                .As(ERender.Content));
+    }
 </div>
