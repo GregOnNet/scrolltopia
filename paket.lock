@@ -1,0 +1,30 @@
+NUGET
+  remote: https://nuget.org/api/v2
+  specs:
+    Microsoft.AspNet.Mvc (4.0.20710) - framework: >= net45
+      Microsoft.AspNet.Razor (>= 2.0.20710.0 < 2.1)
+      Microsoft.AspNet.WebPages (>= 2.0.20710.0 < 2.1)
+    Microsoft.AspNet.Mvc.FixedDisplayModes (1.0.0) - framework: >= net45
+      Microsoft.AspNet.Mvc (>= 4.0.20710.0 < 4.1)
+    Microsoft.AspNet.Razor (2.0.20715) - framework: >= net45
+    Microsoft.AspNet.WebApi (4.0.20710) - framework: >= net45
+      Microsoft.AspNet.WebApi.WebHost (>= 4.0.20710.0 < 4.1)
+    Microsoft.AspNet.WebApi.Client (4.0.20710) - framework: >= net45
+      Microsoft.Net.Http (>= 2.0.20710.0 < 2.1)
+      Newtonsoft.Json (>= 4.5.6)
+    Microsoft.AspNet.WebApi.Core (4.0.20710) - framework: >= net45
+      Microsoft.AspNet.WebApi.Client (>= 4.0.20710.0 < 4.1)
+    Microsoft.AspNet.WebApi.WebHost (4.0.20710) - framework: >= net45
+      Microsoft.AspNet.WebApi.Core (>= 4.0.20710.0 < 4.1)
+      Microsoft.Web.Infrastructure (>= 1.0.0.0)
+    Microsoft.AspNet.WebPages (2.0.20710) - framework: >= net45
+      Microsoft.AspNet.Razor (>= 2.0.20710.0 < 2.1)
+      Microsoft.Web.Infrastructure (>= 1.0.0.0)
+    Microsoft.Net.Http (2.0.20710) - framework: >= net45
+    Microsoft.Web.Infrastructure (1.0.0) - framework: >= net45
+    Newtonsoft.Json (4.5.11) - framework: >= net45
+GITHUB
+  remote: grsmto/simplebar
+  specs:
+    src/simplebar.css (a8914404c1ded73223ba190e2e05b05f9bde4783)
+    src/simplebar.js (a8914404c1ded73223ba190e2e05b05f9bde4783)
