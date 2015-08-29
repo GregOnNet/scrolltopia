@@ -9,6 +9,7 @@
 
 # Paket
 paket.exe
+paket-files/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
