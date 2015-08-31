@@ -6,9 +6,11 @@ A web application providing demos to evaluate scrolling frameworks
 Run the following commands in your console
 
 ```shell
-$ paket install
+# If you have no paket.exe run paket.bootstrapper.exe first.
+$ .paket/paket.bootstrapper.exe
+$ .paket/paket.exe install
 $ bower install
 
 # copy 3rd party libraries not hosted as package but managed by paket
-$ cp -r paket-files/ Scroll.Playground/paket-files/ 
+$ cp -r paket-files/ Scroll.Playground/
 ```
