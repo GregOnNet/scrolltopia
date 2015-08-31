@@ -8,6 +8,10 @@
         <p>
             This sample has no scrollbar. It just can be dragged up and down to scroll
         </p>
+
+        <div class="alert alert-warning">
+            <span class="glyphicon glyphicon-warning-sign"></span> iScroll prevents you from selecting the text inside the scrolling-container.
+        </div>
     </div>
     <div class="row">
 
@@ -27,10 +31,10 @@
 @section Script
 {
     <script type="text/javascript">
-        (function () {
+        (function() {
             'use strict';
 
             var myscroll = new IScroll('.iscroll-container');
         }());
-     </script>
+    </script>
 }
