@@ -22,7 +22,12 @@ namespace Scroll.Playground.Controllers
             return View();
         }
 
-        public ActionResult Scrollbar()
+        public ViewResult Scrollbar()
+        {
+            return View();
+        }
+
+        public ViewResult TriggeringControls()
         {
             return View();
         }

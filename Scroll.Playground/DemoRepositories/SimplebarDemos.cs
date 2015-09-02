@@ -34,6 +34,7 @@ namespace Scroll.Playground.DemoRepositories
                         Title = "Interaction",
                         Demos = new List<Demo>
                         {
+                            new Demo { Title = "TiggeringControls", ActionName = "TriggeringControls" }
                         }
                     },
                     new DemoSection

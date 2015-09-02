@@ -471,6 +471,7 @@
     <Content Include="paket-files\cubiq\iscroll\build\paket.version" />
     <None Include="Views\Simplebar\Index.cshtml" />
     <None Include="Views\Simplebar\MinimalSetup.cshtml" />
+    <Content Include="Views\Simplebar\TriggeringControls.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="paket.references" />
@@ -672,7 +673,7 @@
     <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And $(TargetFrameworkVersion) == 'v4.5'">
       <ItemGroup>
         <Reference Include="System.Net.Http.Formatting">
-          <HintPath>..\packages\Microsoft.AspNet.WebApi.Client\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+          <HintPath>..\packages\Microsoft.AspNet.WebApi.Client\lib\net40\System.Net.Http.Formatting.dll</HintPath>
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>
@@ -683,7 +684,7 @@
     <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And $(TargetFrameworkVersion) == 'v4.5'">
       <ItemGroup>
         <Reference Include="System.Web.Http">
-          <HintPath>..\packages\Microsoft.AspNet.WebApi.Core\lib\net45\System.Web.Http.dll</HintPath>
+          <HintPath>..\packages\Microsoft.AspNet.WebApi.Core\lib\net40\System.Web.Http.dll</HintPath>
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>
