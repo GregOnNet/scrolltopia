@@ -1,6 +1,6 @@
 ﻿@using Scrolltopia.Web.Models
 @using Scrolltopia.Web.ViewModels
-@model Scrolltopia.Web.Models.ControllerDemoCollection
+@model ControllerDemoCollection
 
 @{
     ViewBag.Title = "simplebar | Scrolltopia";
@@ -18,20 +18,28 @@
     <h2>Prerequisits</h2>
     <p>To use simplebar you have to add it's script file and stylesheet</p>
     <pre class="reset-styles">
-    <code lang="html">
+        <code lang="html">
 &lt;link rel="stylesheet" href="css/simplebar.css" /&gt;
 &lt;script src="js/simplebar.min.js"&gt;&lt;/script&gt;
         </code>
-</pre>
+    </pre>
+    
+    <h2>Mobile support</h2>
+    <p>
+        Most of the mobile browsers have "floating" scrollbars. Also, they are not all currently supporting hardware acceleration on <code>overflow: auto</code> elements.
+        So we decided to automatically disable SimpleBar when a "floating" scrollbar is detected.
+        So mobile browsers will use native scrollbar seemlessly.
+        For example you will notice that it will use native scrollbar on mac OSX 10.8+ (when using trackpad) as the scrollbar is natively floating.
+    </p>
 
     <h2>Samples</h2>
     <p>In this section you will find different Samples covering different use cases we have in our web applications.</p>
 
     @{
         Html.RenderPartial(
-           "Demos/_SimplebarDemos",
-           Render<ControllerDemoCollection>
-               .Model(Model)
-               .As(ERender.Content));
+            "Demos/_SimplebarDemos",
+            Render<ControllerDemoCollection>
+                .Model(Model)
+                .As(ERender.Content));
     }
 </div>

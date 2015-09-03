@@ -4,10 +4,11 @@
 
 <div class="container">
     <div class="row">
-        <h1>Minimal sample</h1>
+        <h1>Scrollbar</h1>
         <p>
-            This sample adds a scrollbar by adding a custom attribute to the container that should be scrolled:
-            <code>data-simplebar-direction="vertical"</code>
+            In this sample simplebar is configured to display the scrollbar all the time.
+            Therefore simplebar has to be initialized via javascript:
+            <code>$('#simplebar-container').simplebar({ ... })</code>
         </p>
     </div>
     <div class="row">
@@ -20,6 +21,16 @@
 
         </section>
 
+    </div>
+    <div class="row">
+        <h2>Configuration</h2>
+        <pre class="reset-styles">
+            <code class="json">
+{
+    autoHide: false
+}
+            </code>
+        </pre>
     </div>
 </div>
 @section Script
