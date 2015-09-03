@@ -12,5 +12,5 @@ $ .paket/paket.exe install
 $ bower install
 
 # copy 3rd party libraries not hosted as package but managed by paket
-$ cp -r paket-files/ Scroll.Playground/
+$ cp -r paket-files/ Scrolltopia.Web/
 ```
