@@ -1,0 +1,54 @@
+﻿@using Scrolltopia.Web.Models
+@using Scrolltopia.Web.ViewModels
+@model ControllerDemoCollection
+
+@{
+    ViewBag.Title = "nanoScroller | Scrolltopia";
+}
+
+<div class="container">
+    <h1>
+        NanoScroller showcase
+        <small>
+            <a href="https://github.com/jamesflorentino/nanoScrollerJS" target="_blank">Project site</a> | <a href="https://jamesflorentino.github.io/nanoScrollerJS/">Demo</a>
+        </small>
+    </h1>
+
+    <h2 id="no-ie8-support">No IE8 support</h2>
+    <div class="alert alert-warning">
+        <span class="glyphicon glyphicon-warning-sign"></span>&nbsp;
+        It turns out taht iScroll does not support IE8 (<a href="https://github.com/cubiq/iscroll/pull/436" target="_blank">see issue</a>).
+        There are some libraries hacking the support for IE8.
+        Trying <a href="https://github.com/4alexandr/iscroll5-ie8/blob/master/iscroll5-ie8.js">iscroll5-ie8</a> does not work.
+    </div>
+
+    <h2>Prerequisits</h2>
+    <div>
+        To get iScroll to work it is importand to setup some css styles. Otherwise you will experience an unexpected scrolling behavior.
+        The following sample shows the style of the wrapping container which will be passed to iScroll.
+        <ul>
+            <li>The container has to define <code>height</code> or <code>max-height</code>.</li>
+            <li><code>overflow:hidden</code> has to be set.</li>
+            <li>The container needs to have <code>postion-relative</code>.</li>
+        </ul>
+    </div>
+    <pre class="reset-styles">
+    <code class="css">
+.iscroll-container {
+    height:   200px;
+    position: relative;
+    overflow: hidden;
+}
+        </code>
+    </pre>
+
+    <h2>Samples</h2>
+    <p>In this section you will find different Samples covering different use cases we have in our web applications.</p>
+    @{
+        Html.RenderPartial(
+            "Demos/_IScrollDemos",
+            Render<ControllerDemoCollection>
+                .Model(Model)
+                .As(ERender.Content));
+    }
+</div>

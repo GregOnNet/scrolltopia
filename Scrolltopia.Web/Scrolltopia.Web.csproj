@@ -100,7 +100,9 @@
   <ItemGroup>
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IscrollController.cs" />
+    <Compile Include="Controllers\NanoScrollerController.cs" />
     <Compile Include="Controllers\SimpleBarController.cs" />
+    <Compile Include="DemoRepositories\NanoScrollerDemos.cs" />
     <Compile Include="DemoRepositories\IscrollDemos.cs" />
     <Compile Include="DemoRepositories\SimplebarDemos.cs" />
     <Compile Include="Global.asax.cs">
@@ -118,6 +120,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <None Include="App_Code\LoremIpsum.cshtml" />
+    <Content Include="bower_components\jquery.scrollTo\jquery.scrollTo.js" />
+    <Content Include="bower_components\jquery.scrollTo\jquery.scrollTo.min.js" />
     <Content Include="paket-files\cubiq\iscroll\build\iscroll-probe.js" />
     <Content Include="paket-files\grsmto\simplebar\src\simplebar.css" />
     <Content Include="paket-files\grsmto\simplebar\src\simplebar.js" />
@@ -469,6 +473,11 @@
     <Content Include="bower_components\respond\README.md" />
     <Content Include="paket-files\grsmto\simplebar\src\paket.version" />
     <Content Include="paket-files\cubiq\iscroll\build\paket.version" />
+    <Content Include="bower_components\jquery.scrollTo\.bower.json" />
+    <Content Include="bower_components\jquery.scrollTo\bower.json" />
+    <Content Include="bower_components\jquery.scrollTo\LICENSE" />
+    <None Include="Views\NanoScroller\Index.cshtml" />
+    <Content Include="Views\Shared\Demos\_NanoScrollerDemos.cshtml" />
     <None Include="Views\Simplebar\Index.cshtml" />
     <None Include="Views\Simplebar\MinimalSetup.cshtml" />
     <Content Include="Views\Simplebar\TriggeringControls.cshtml" />

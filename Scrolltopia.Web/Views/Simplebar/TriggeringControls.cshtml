@@ -24,7 +24,7 @@
 
             <section class="sample">
 
-                <div class="height-of-450-pixels" data-simplebar-direction="vertical">
+                <div id="simplebar-container" class="simplebar height-of-450-pixels">
                     @LoremIpsum.InsertParagraphs(6)
                 </div>
 
@@ -60,7 +60,19 @@
         (function() {
             'use strict';
 
+            var scrollingArea = $('#simplebar-container').simplebar(
+            { autoHide: false });
 
+            var up = $('#btn-scroll-up');
+            var down = $('#btn-scroll-down');
+
+            up.on('click', function() {
+                scrollingArea.scrollTo('50px', 800);
+            });
+
+            down.on('click', function() {
+                scrollingArea.scrollTo('+=50');
+            });
         }());
     </script>
 }
