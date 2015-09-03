@@ -1,11 +1,12 @@
 source https://nuget.org/api/v2
 
 # NuGet Packages
-nuget Microsoft.AspNet.WebApi         ~> 4.0.0
-nuget Microsoft.AspNet.WebApi.Core    ~> 4.0.0
-nuget Microsoft.AspNet.WebApi.Client  ~> 4.0.0
-nuget Microsoft.AspNet.WebApi.WebHost ~> 4.0.0
-nuget Microsoft.AspNet.Mvc.FixedDisplayModes 1.0.0
+nuget Microsoft.AspNet.WebApi                ~> 4.0.0 framework: >= net45
+nuget Microsoft.AspNet.WebApi.Core           ~> 4.0.0 framework: >= net45
+nuget Microsoft.AspNet.WebApi.Client         ~> 4.0.0 framework: >= net45
+nuget Microsoft.AspNet.WebApi.WebHost        ~> 4.0.0 framework: >= net45
+nuget Newtonsoft.Json                        ~> 6.0.0 framework: >= net45
+nuget Microsoft.AspNet.Mvc.FixedDisplayModes    1.0.0 framework: >= net45
 
 # simplebar.js
 github grsmto/simplebar src/simplebar.js

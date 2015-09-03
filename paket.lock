@@ -1,33 +1,33 @@
 NUGET
   remote: https://nuget.org/api/v2
   specs:
-    Microsoft.AspNet.Mvc (4.0.40804) - framework: net45
+    Microsoft.AspNet.Mvc (4.0.40804)
       Microsoft.AspNet.Razor (>= 2.0.20710.0)
       Microsoft.AspNet.WebPages (>= 2.0.20710.0)
     Microsoft.AspNet.Mvc.FixedDisplayModes (1.0.0) - framework: >= net45
       Microsoft.AspNet.Mvc (>= 4.0.20710.0 < 4.1)
-    Microsoft.AspNet.Razor (2.0.30506) - framework: net45
-    Microsoft.AspNet.WebApi (4.0.30506) - framework: net45
+    Microsoft.AspNet.Razor (3.2.3)
+    Microsoft.AspNet.WebApi (4.0.30506) - framework: >= net45
       Microsoft.AspNet.WebApi.WebHost (>= 4.0.20710.0)
-    Microsoft.AspNet.WebApi.Client (4.0.30506) - framework: net45
+    Microsoft.AspNet.WebApi.Client (4.0.30506) - framework: >= net45
       Microsoft.Net.Http (>= 2.0.20710.0)
       Newtonsoft.Json (>= 4.5.6)
-    Microsoft.AspNet.WebApi.Core (4.0.30506) - framework: net45
+    Microsoft.AspNet.WebApi.Core (4.0.30506) - framework: >= net45
       Microsoft.AspNet.WebApi.Client (>= 4.0.20710.0)
-    Microsoft.AspNet.WebApi.WebHost (4.0.30506)
+    Microsoft.AspNet.WebApi.WebHost (4.0.30506) - framework: >= net45
       Microsoft.AspNet.WebApi.Core (>= 4.0.20710.0)
       Microsoft.Web.Infrastructure (>= 1.0.0.0)
-    Microsoft.AspNet.WebPages (2.0.20710) - framework: >= net45
-      Microsoft.AspNet.Razor (>= 2.0.20710.0 < 2.1)
+    Microsoft.AspNet.WebPages (3.2.3)
+      Microsoft.AspNet.Razor (>= 3.2.3 < 3.3.0)
       Microsoft.Web.Infrastructure (>= 1.0.0.0)
     Microsoft.Bcl (1.1.10)
       Microsoft.Bcl.Build (>= 1.0.14)
     Microsoft.Bcl.Build (1.0.21)
-    Microsoft.Net.Http (2.2.29) - framework: portable-wp80+win+net45+wp81+wpa81
+    Microsoft.Net.Http (2.2.29)
       Microsoft.Bcl (>= 1.1.10)
       Microsoft.Bcl.Build (>= 1.0.14)
     Microsoft.Web.Infrastructure (1.0.0)
-    Newtonsoft.Json (6.0.4) - framework: >= net45
+    Newtonsoft.Json (6.0.8) - framework: >= net45
 GITHUB
   remote: grsmto/simplebar
   specs:
