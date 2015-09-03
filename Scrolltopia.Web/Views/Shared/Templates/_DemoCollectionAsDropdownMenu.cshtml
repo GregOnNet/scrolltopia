@@ -1,0 +1,24 @@
+﻿@model  Scrolltopia.Web.Models.ControllerDemoCollection
+
+<ul class="dropdown-menu">
+
+    @{var lastSection = Model.Demos.Last();}
+    @foreach (var section in Model.Demos)
+    {
+        <li class="dropdown-header">@(section.Title)</li>
+            
+        var lastDemo = section.Demos.Count > 0
+                         ? section.Demos.Last()
+                         : null;
+
+        foreach (var demo in section.Demos)
+        {
+        <li>@Html.ActionLink(demo.Title, demo.ActionName, Model.ControllerName)</li>
+            
+            if (demo == lastDemo && section != lastSection)
+            {
+                <li class="divider"></li>
+            }
+        }
+    }
+</ul>

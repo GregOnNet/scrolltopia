@@ -1,0 +1,94 @@
+﻿@using Scrolltopia.Web.DemoRepositories
+@using Scrolltopia.Web.Models
+@using Scrolltopia.Web.ViewModels
+@{
+    var iscrollDemos = new IscrollDemos();
+    var simplebarDemos = new SimplebarDemos();
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <!-- Vendor -->
+    <link rel="stylesheet" href="~/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="~/bower_components/highlightjs/styles/default.css">
+
+    <!-- Simplebar -->
+    <link rel="stylesheet" href="~/paket-files/grsmto/simplebar/src/simplebar.css">
+
+    <!-- Custom -->
+    <link rel="stylesheet" href="~/styles/scrolling.css">
+    <link rel="stylesheet" href="~/styles/utils.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="~/bower_components/html5shiv/dist/html5shiv.js"></script>
+        <script src="~/bower_components/respond/dest/respond.src.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Scrolltopia", "Index", "Home", null, new { @class = "navbar-brand" })
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">iScroll <span class="caret"></span></a>
+                        @{
+                            Html.RenderPartial("Demos/_IScrollDemos",
+                                Render<ControllerDemoCollection>
+                                    .Model(iscrollDemos.GetAll())
+                                    .As(ERender.Menu));
+                        }
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">simplebar <span class="caret"></span></a>
+                        @{
+                            Html.RenderPartial("Demos/_SimplebarDemos",
+                                Render<ControllerDemoCollection>
+                                    .Model(simplebarDemos.GetAll())
+                                    .As(ERender.Menu));
+                        }
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    @RenderBody()
+
+    <!-- IE8 polyfills -->
+    <script src="~/bower_components/js-polyfills/polyfill.min.js" charset="utf-8"></script>
+
+    <!-- Vendor -->
+    <script src="~/bower_components/jquery/dist/jquery.js" charset="utf-8"></script>
+    <script src="~/bower_components/bootstrap/dist/js/bootstrap.js" charset="utf-8"></script>
+    <script src="~/bower_components/highlightjs/highlight.pack.js" charset="utf-8"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- Iscroll -->
+    <script src="~/paket-files/cubiq/iscroll/build/iscroll-probe.js" charset="utf-8"></script>
+
+    <!-- Simplebar -->
+    <script src="~/paket-files/grsmto/simplebar/src/simplebar.js" charset="utf-8"></script>
+
+    @RenderSection("Script", false)
+</body>
+</html>

@@ -1,0 +1,12 @@
+﻿@using Scrolltopia.Web.Models
+@model Scrolltopia.Web.ViewModels.Render<Scrolltopia.Web.Models.ControllerDemoCollection>
+
+@switch (Model.RenderMode)
+{
+    case ERender.Menu:
+        @Html.Partial("Templates/_DemoCollectionAsDropdownMenu", Model.Content);
+        break;
+    case ERender.Content:
+        @Html.Partial("Templates/_DemoCollectionAsContent", Model.Content)
+        break;
+}
