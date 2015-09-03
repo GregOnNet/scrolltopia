@@ -43,13 +43,25 @@
         </div>
     </div>
     <div class="row">
-        <h2>Configuration</h2>
-        <pre>
-            {
-                scrollbars: true,
-                interactiveScrollbars: true,
-                mouseWheel: true
-            }   
+        <h2>Usage</h2>
+        <pre class="reset-styles">
+<code class="javascript">
+{
+    // Initialize simplebar
+    var scrollingArea = $('#simplebar-container').simplebar({ autoHide: false });
+    
+    // Grap button that should control scrolling
+    var up = $('#btn-scroll-up');
+    
+    up.on('click', function() {
+                scrollingArea
+                    // Get scroll container of simplebar
+                    .simplebar('getScrollElement')
+                    // Scroll 50px up based on current position, scrolling animation takes 200ms
+                    .scrollTo('-=50', 200);
+            });
+}   
+</code>
         </pre>
     </div>
 </div>
@@ -67,11 +79,15 @@
             var down = $('#btn-scroll-down');
 
             up.on('click', function() {
-                scrollingArea.scrollTo('50px', 800);
+                scrollingArea
+                    .simplebar('getScrollElement')
+                    .scrollTo('-=50', 200);
             });
 
             down.on('click', function() {
-                scrollingArea.scrollTo('+=50');
+                scrollingArea
+                    .simplebar('getScrollElement')
+                    .scrollTo('+=50', 200);
             });
         }());
     </script>
