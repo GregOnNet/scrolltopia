@@ -43,7 +43,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            @Html.ActionLink("Scrolltopia", "Index", "Home", null, new {@class = "navbar-brand"})
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")">
+                <img src="~/styles/img/scroll-24x24.png" alt="logo"/>
+            </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
