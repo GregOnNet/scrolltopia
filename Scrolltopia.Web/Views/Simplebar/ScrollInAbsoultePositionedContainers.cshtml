@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Absolute positioned containers | simplebar";
+}
+<div class="container">
+    <div class="row">
+        <h1>Scrolling in absolute positioned containers</h1>
+        <p>
+            This sample shows that even in absolute positioned containers simplebar will do it's job.
+        </p>
+        <ul class="list-unstyled">
+            <li>Container <span style="color: red">red</span> has <code>position: relative</code>.</li>
+            <li>Container <span style="color: blue">blue</span> has <code>position: absolute</code>.</li>
+            <ul>
+                <li>In the <span style="color: blue">blue</span> container simplebar has <code>position: static</code> (the initial element positioning).</li>
+            </ul>
+        </ul>
+    </div>
+    <div class="row">
+        <section class="sample">
+
+            <div class="outer-container-relative">
+                <div class="inner-container-absolute">
+
+
+                    <div class="height-of-450-pixels" data-simplebar-direction="vertical" style="position: static">
+                        @LoremIpsum.InsertParagraphs(6)
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>

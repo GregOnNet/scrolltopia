@@ -1,0 +1,36 @@
+.sample {
+    padding: 8px;
+    border: 1px solid #ccc;
+    -ms-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.sample.plain {
+    padding: 0;
+    border: 0;
+}
+
+.outer-container-relative {
+    width: 25%;
+    height: 200px;
+    position: relative;
+    -ms-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid red;
+}
+
+.inner-container-absolute {
+    left: 100%;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    -ms-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid blue;
+}

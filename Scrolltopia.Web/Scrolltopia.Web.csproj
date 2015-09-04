@@ -125,6 +125,7 @@
     <Content Include="paket-files\cubiq\iscroll\build\iscroll-probe.js" />
     <Content Include="paket-files\grsmto\simplebar\src\simplebar.css" />
     <Content Include="paket-files\grsmto\simplebar\src\simplebar.js" />
+    <Content Include="styles\sample.css" />
     <Content Include="Web.config.install.xdt">
       <Paket>True</Paket>
     </Content>
@@ -426,7 +427,7 @@
     <Content Include="bower_components\simplebar\test\test.js" />
     <Content Include="Global.asax" />
     <Content Include="styles\utils.css" />
-    <Content Include="styles\scrolling.css" />
+    <Content Include="styles\iscroll-demo.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -481,6 +482,7 @@
     <None Include="Views\Simplebar\Index.cshtml" />
     <None Include="Views\Simplebar\MinimalSetup.cshtml" />
     <Content Include="Views\Simplebar\TriggeringControls.cshtml" />
+    <Content Include="Views\Simplebar\ScrollInAbsoultePositionedContainers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="paket.references" />
