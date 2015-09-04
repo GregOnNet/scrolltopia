@@ -41,5 +41,10 @@ namespace Scrolltopia.Web.Controllers
         {
             return View();
         }
+
+        public ViewResult Ie8CssOptimization()
+        {
+            return View();
+        }
     }
 }

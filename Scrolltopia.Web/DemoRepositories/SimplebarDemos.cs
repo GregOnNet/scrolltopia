@@ -59,6 +59,11 @@ namespace Scrolltopia.Web.DemoRepositories
                             {
                                 Title = "IE8 optimizations",
                                 ActionName = "CustomizingScrollbar"
+                            },
+                            new Demo
+                            {
+                                Title = "IE8 nativ css optimizations",
+                                ActionName = "Ie8CssOptimization"
                             }
                         }
                     }

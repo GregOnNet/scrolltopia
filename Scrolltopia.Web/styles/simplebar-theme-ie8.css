@@ -1,0 +1,139 @@
+.simplebar, [data-simplebar-direction] {
+    position: relative;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch; /* Trigger native scrolling for mobile, if not supported, plugin is used. */
+}
+
+.simplebar .simplebar-scroll-content,
+[data-simplebar-direction] .simplebar-scroll-content {
+    overflow-y: scroll;
+    overflow-x: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -ms-overflow-style: none; /* hide browser scrollbar on IE10+ */
+}
+
+/* hide browser scrollbar on Webkit (Safari & Chrome) */
+
+.simplebar-scroll-content::-webkit-scrollbar { display: none; }
+
+[data-simplebar-direction="horizontal"] .simplebar-scroll-content,
+.simplebar.horizontal .simplebar-scroll-content {
+    overflow-x: scroll;
+    overflow-y: auto;
+}
+
+.simplebar-track {
+    /* native simplebar */
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    bottom: 0;
+    width: 2px;
+    /* custom-style */
+    background: #AAA;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0d…g9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNsZXNzaGF0LWdlbmVyYXRlZCkiIC8+PC9zdmc+);
+    background-image: -webkit-linear-gradient(top, #f1f1f1 0%, #474747 50%, #f1f1f1 100%);
+    background-image: -moz-linear-gradient(top, #f1f1f1 0%, #474747 50%, #f1f1f1 100%);
+    background-image: -o-linear-gradient(top, #f1f1f1 0%, #474747 50%, #f1f1f1 100%);
+    background-image: linear-gradient(to bottom, #f1f1f1 0%, #474747 50%, #f1f1f1 100%);
+    -ms-zoom: 1;
+    zoom: 1;
+    -webkit-filter: alpha(opacity=100);
+    -moz-filter: alpha(opacity=100);
+    -o-filter: alpha(opacity=100);
+    filter: alpha(opacity=100);
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    -ms-opacity: 1;
+    opacity: 1;
+
+    filter: none !important\9;
+}
+
+.simplebar-track .simplebar-scrollbar {
+    position: absolute;
+    right: -5px;
+    min-height: 10px;
+    /* Custom styles */
+    width: 12px;
+    cursor: pointer;
+    -webkit-border-radius: 3px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 3px;
+    -moz-background-clip: padding;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    -ms-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #d9d9d9;
+    background: #ebebeb;
+    -ms-zoom: 1;
+    zoom: 1;
+    -webkit-filter: alpha(opacity=100);
+    -moz-filter: alpha(opacity=100);
+    -o-filter: alpha(opacity=100);
+    filter: alpha(opacity=100);
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    -ms-opacity: 1;
+    opacity: 1;
+}
+
+.simplebar-track:hover .simplebar-scrollbar {
+    /* When hovered, remove all transitions from drag handle */
+    -ms-opacity: 1;
+    opacity: 1;
+    -webkit-transition: opacity 0 linear;
+    -moz-transition: opacity 0 linear;
+    -o-transition: opacity 0 linear;
+    -ms-transition: opacity 0 linear;
+    transition: opacity 0 linear;
+}
+
+.simplebar-track .simplebar-scrollbar.visible {
+    -ms-opacity: 1;
+    opacity: 1;
+}
+
+[data-simplebar-direction="horizontal"] .simplebar-track,
+.simplebar.horizontal .simplebar-track {
+    top: auto;
+    left: 0;
+    width: auto;
+    height: 11px;
+}
+
+[data-simplebar-direction="horizontal"] .simplebar-track .simplebar-scrollbar,
+.simplebar.horizontal .simplebar-track .simplebar-scrollbar {
+    right: auto;
+    top: 2px;
+    height: 7px;
+    min-height: 0;
+    -moz-min-width: 10px;
+    -ms-min-width: 10px;
+    -o-min-width: 10px;
+    -webkit-min-width: 10px;
+    min-width: 10px;
+    width: auto;
+}
+
+.hide-ie8-scrollbar {
+    scrollbar-3dlight-color: #FF00FF;
+    scrollbar-arrow-color: #FF00FF;
+    scrollbar-base-color: #FF00FF;
+    scrollbar-darkshadow-color: #FF00FF;
+    scrollbar-face-color: #FF00FF;
+    scrollbar-highlight-color: #FF00FF;
+    scrollbar-shadow-color: #FF00FF;
+    -webkit-filter: chroma(#FF00FF);
+    -moz-filter: chroma(#FF00FF);
+    -o-filter: chroma(#FF00FF);
+    filter: chroma(#FF00FF);
+}
+
+body { filter: chroma(#FF00FF); }
