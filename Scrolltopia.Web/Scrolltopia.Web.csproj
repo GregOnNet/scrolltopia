@@ -120,6 +120,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <None Include="App_Code\LoremIpsum.cshtml" />
+    <Content Include="bower_components\jquery-mousewheel\jquery.mousewheel.js" />
+    <Content Include="bower_components\jquery-mousewheel\jquery.mousewheel.min.js" />
+    <Content Include="bower_components\jquery-mousewheel\LICENSE.txt" />
     <Content Include="bower_components\jquery.scrollTo\jquery.scrollTo.js" />
     <Content Include="bower_components\jquery.scrollTo\jquery.scrollTo.min.js" />
     <Content Include="favicon.ico" />
@@ -485,6 +488,10 @@
     <Content Include="bower_components\jquery.scrollTo\.bower.json" />
     <Content Include="bower_components\jquery.scrollTo\bower.json" />
     <Content Include="bower_components\jquery.scrollTo\LICENSE" />
+    <Content Include="bower_components\jquery-mousewheel\.bower.json" />
+    <Content Include="bower_components\jquery-mousewheel\bower.json" />
+    <Content Include="bower_components\jquery-mousewheel\ChangeLog.md" />
+    <Content Include="bower_components\jquery-mousewheel\README.md" />
     <None Include="Views\NanoScroller\Index.cshtml" />
     <Content Include="Views\Shared\Demos\_NanoScrollerDemos.cshtml" />
     <Content Include="Views\Simplebar\CustomizingScrollbar.cshtml" />
