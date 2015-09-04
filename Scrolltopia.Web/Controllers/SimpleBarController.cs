@@ -36,5 +36,10 @@ namespace Scrolltopia.Web.Controllers
         {
             return View();
         }
+
+        public ViewResult CustomizingScrollbar()
+        {
+            return View();
+        }
     }
 }

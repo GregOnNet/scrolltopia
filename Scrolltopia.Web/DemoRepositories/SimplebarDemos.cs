@@ -51,9 +51,10 @@ namespace Scrolltopia.Web.DemoRepositories
                     },
                     new DemoSection
                     {
-                        Title = "Events",
+                        Title = "Customizing",
                         Demos = new List<Demo>
                         {
+                            new Demo {Title = "Use own styles", ActionName = "CustomizingScrollbar"}
                         }
                     }
                 }

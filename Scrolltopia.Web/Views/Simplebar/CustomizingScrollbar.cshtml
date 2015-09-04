@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Custom styles | simplebar";
+}
+@section Theme {
+    <link rel="stylesheet" href="~/styles/simplebar-theme.css"/>
+}
+
+<div class="container">
+    <div class="row">
+        <h1>Use own styles</h1>
+        <p>
+        </p>
+    </div>
+    <div class="row">
+
+        <section class="sample">
+
+            <div class="height-of-450-pixels" data-simplebar-direction="vertical">
+                @LoremIpsum.InsertParagraphs(6)
+            </div>
+
+        </section>
+
+    </div>
+</div>

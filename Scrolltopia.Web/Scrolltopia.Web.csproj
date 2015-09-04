@@ -126,6 +126,7 @@
     <Content Include="paket-files\cubiq\iscroll\build\iscroll-probe.js" />
     <Content Include="paket-files\grsmto\simplebar\src\simplebar.css" />
     <Content Include="paket-files\grsmto\simplebar\src\simplebar.js" />
+    <Content Include="styles\simplebar-theme.css" />
     <Content Include="styles\img\scroll-128x128.png" />
     <Content Include="styles\img\scroll-16x16.png" />
     <Content Include="styles\img\scroll-24x24.png" />
@@ -486,6 +487,7 @@
     <Content Include="bower_components\jquery.scrollTo\LICENSE" />
     <None Include="Views\NanoScroller\Index.cshtml" />
     <Content Include="Views\Shared\Demos\_NanoScrollerDemos.cshtml" />
+    <Content Include="Views\Simplebar\CustomizingScrollbar.cshtml" />
     <None Include="Views\Simplebar\Index.cshtml" />
     <None Include="Views\Simplebar\MinimalSetup.cshtml" />
     <Content Include="Views\Simplebar\TriggeringControls.cshtml" />
