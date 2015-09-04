@@ -10,8 +10,34 @@
         <h1>Use own styles</h1>
         <p>
             The scrollbar in this sample uses a custemized css-file <code>simple-theme.css</code>.
-            To mod
+            To modify simplebars styles you have to change two classes.
         </p>
+        <ul>
+            <li>
+                <code>.simplebar-track</code> to change the design of the area in which the scrollbar will move up and down.
+            </li>
+            <li>
+                <code>.simplebar-scrollbar</code> to change the design of the scrollbar itself.
+            </li>
+        </ul>
+        <div class="alert alert-warning">
+            <span class="glyphicon glyphicon-info-sign"></span>&nbsp;
+            <strong>IE8 optimizations</strong>&nbsp;
+            To have the same appeareance on IE two CSS hacks arre needed
+            <hr>
+            <ol>
+                <li>
+                    <code>.simplebar-track</code> need the attribute <code>filter: none !important\9;</code> to get proper scrollbar dimensions.
+                </li>
+                <li>
+                    <code>.simplebar-scroll-content</code> need the attribute <code>overflow-y: hidden\9;</code> to hide the native scrollbar.
+                    <span class="text text-danger">This will disable scrolling with the mousewheel.</span>
+                </li>
+                <li>
+                    To <span class="text text-success">enable mousewheel scrolling</span> <a href="https://github.com/jquery/jquery-mousewheel" target="_blank">jquery-mouesewheel </a> can be introduced (refer to the code-documentation below).
+                </li>
+            </ol>
+        </div>
     </div>
     <div class="row">
 
@@ -26,7 +52,34 @@
         </section>
 
     </div>
+    <div class="row">
+        <h2>Usage</h2>
+        <pre class="reset-styles">
+            <code class="javascript">
+// Check if current browser is IE8
+var isIe8 = window.navigator.userAgent.indexOf('MSIE 7') > 0;
+var scrollingArea = $('#simplebar-container').simplebar({ autoHide: false });
+                
+// When IE8 is detected the fix for mousewheel scrolling will be activated
+if (isIe8)
+    scrollingArea.on('mousewheel', function(event) {
+        
+        var scrollDirection;
+        
+        // Set the scrolling direction and the distance should be scrolled depending on the mousewheel event.
+        event.deltaY > 0
+            ? scrollDirection = '-=30'
+            : scrollDirection = '+=30';
+
+        scrollingArea
+            .simplebar('getScrollElement')
+            .scrollTo(scrollDirection);
+    });
+            </code>
+        </pre>
+    </div>
 </div>
+
 @section Script
 {
     <script>
@@ -35,7 +88,6 @@
 
             var isIe8 = window.navigator.userAgent.indexOf('MSIE 7') > 0;
             var scrollingArea = $('#simplebar-container').simplebar({ autoHide: false });
-
 
             if (isIe8)
                 scrollingArea.on('mousewheel', function(event) {

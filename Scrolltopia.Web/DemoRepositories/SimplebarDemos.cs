@@ -54,7 +54,12 @@ namespace Scrolltopia.Web.DemoRepositories
                         Title = "Customizing",
                         Demos = new List<Demo>
                         {
-                            new Demo {Title = "Use own styles", ActionName = "CustomizingScrollbar"}
+                            new Demo {Title = "Use own styles", ActionName = "CustomizingScrollbar"},
+                            new Demo
+                            {
+                                Title = "IE8 optimizations",
+                                ActionName = "CustomizingScrollbar"
+                            }
                         }
                     }
                 }
