@@ -122,9 +122,16 @@
     <None Include="App_Code\LoremIpsum.cshtml" />
     <Content Include="bower_components\jquery.scrollTo\jquery.scrollTo.js" />
     <Content Include="bower_components\jquery.scrollTo\jquery.scrollTo.min.js" />
+    <Content Include="favicon.ico" />
     <Content Include="paket-files\cubiq\iscroll\build\iscroll-probe.js" />
     <Content Include="paket-files\grsmto\simplebar\src\simplebar.css" />
     <Content Include="paket-files\grsmto\simplebar\src\simplebar.js" />
+    <Content Include="styles\img\scroll-128x128.png" />
+    <Content Include="styles\img\scroll-16x16.png" />
+    <Content Include="styles\img\scroll-24x24.png" />
+    <Content Include="styles\img\scroll-32x32.png" />
+    <Content Include="styles\img\scroll-48x48.png" />
+    <Content Include="styles\img\scroll-64x64.png" />
     <Content Include="styles\sample.css" />
     <Content Include="Web.config.install.xdt">
       <Paket>True</Paket>
