@@ -33,9 +33,23 @@
         (function() {
             'use strict';
 
-            $('#simplebar-container').simplebar({
-                autoHide: false
-            });
+            var isIe8 = window.navigator.userAgent.indexOf('MSIE 7') > 0;
+            var scrollingArea = $('#simplebar-container').simplebar({ autoHide: false });
+
+
+            if (isIe8)
+                scrollingArea.on('mousewheel', function(event) {
+
+                    var scrollDirection;
+
+                    event.deltaY > 0
+                        ? scrollDirection = '-=30'
+                        : scrollDirection = '+=30';
+
+                    scrollingArea
+                        .simplebar('getScrollElement')
+                        .scrollTo(scrollDirection);
+                });
         })();
     </script>
 }
