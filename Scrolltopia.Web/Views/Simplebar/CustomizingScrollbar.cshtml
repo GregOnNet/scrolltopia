@@ -9,17 +9,33 @@
     <div class="row">
         <h1>Use own styles</h1>
         <p>
+            The scrollbar in this sample uses a custemized css-file <code>simple-theme.css</code>.
+            To mod
         </p>
     </div>
     <div class="row">
 
         <section class="sample">
 
-            <div class="height-of-450-pixels" data-simplebar-direction="vertical">
-                @LoremIpsum.InsertParagraphs(6)
+            <div id="simplebar-container" class="simplebar height-of-450-pixels">
+                <div class="add-space-to-scrollbar">
+                    @LoremIpsum.InsertParagraphs(6)
+                </div>
             </div>
 
         </section>
 
     </div>
 </div>
+@section Script
+{
+    <script>
+        (function() {
+            'use strict';
+
+            $('#simplebar-container').simplebar({
+                autoHide: false
+            });
+        })();
+    </script>
+}
