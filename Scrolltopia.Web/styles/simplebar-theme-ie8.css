@@ -123,17 +123,17 @@
 }
 
 .hide-ie8-scrollbar {
-    scrollbar-3dlight-color: #FF00FF;
-    scrollbar-arrow-color: #FF00FF;
-    scrollbar-base-color: #FF00FF;
-    scrollbar-darkshadow-color: #FF00FF;
-    scrollbar-face-color: #FF00FF;
-    scrollbar-highlight-color: #FF00FF;
-    scrollbar-shadow-color: #FF00FF;
-    -webkit-filter: chroma(#FF00FF);
-    -moz-filter: chroma(#FF00FF);
-    -o-filter: chroma(#FF00FF);
-    filter: chroma(#FF00FF);
+    scrollbar-3dlight-color: #FFFFFF;
+    scrollbar-arrow-color: #FFFFFF;
+    scrollbar-base-color: #FFFFFF;
+    scrollbar-darkshadow-color: #FFFFFF;
+    scrollbar-face-color: #FFFFFF;
+    scrollbar-highlight-color: #FFFFFF;
+    scrollbar-shadow-color: #FFFFFF;
+    -webkit-filter: chroma(#FFFFFF);
+    -moz-filter: chroma(#FFFFFF);
+    -o-filter: chroma(#FFFFFF);
+    filter: chroma(#FFFFFF);
 }
 
-body { filter: chroma(#FF00FF); }
+body { filter: chroma(#FFFFFF); }
