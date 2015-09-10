@@ -19,9 +19,10 @@
     </div>
     <div class="row">
         <section class="sample">
+            <button id="btn-toggle-height" class="btn btn-primary">Toggle height</button>
 
             <div class="outer-container-relative">
-                <div class="inner-container-absolute">
+                <div  id="resizable-container" class="inner-container-absolute">
 
 
                     <div class="height-of-450-pixels" data-simplebar-direction="vertical" style="position: static">
@@ -35,3 +36,21 @@
 
     </div>
 </div>
+@section Script
+{
+    <script>
+        (function() {
+
+            var resizable = $('#resizable-container');
+            var toggleBtn = $('#btn-toggle-height');
+
+            toggleBtn.on('click', function () {
+
+                if(resizable.height() > 200)
+                    resizable.css({ height: "200px" });
+                else
+                    resizable.css({ height: "450px" });
+            });
+        })();
+    </script>
+}
